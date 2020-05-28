@@ -1,0 +1,6 @@
+C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\DAL\bin\Debug\DAL.dll
+C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\DAL\bin\Debug\DAL.pdb
+C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\DAL\obj\Debug\DAL.dll
+C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\DAL\obj\Debug\DAL.pdb

@@ -1,0 +1,11 @@
+C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\BL\bin\Debug\BL.dll
+C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\BL\bin\Debug\BL.pdb
+C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\BL\obj\Debug\BL.dll
+C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\BL\obj\Debug\BL.pdb
+C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\BL\bin\Debug\DAL.dll
+C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\BL\bin\Debug\DAL.pdb
+C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\BL\obj\Debug\BL.csprojAssemblyReference.cache
+C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\BL\obj\Debug\BL.csproj.CopyComplete
+C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\BL\bin\Debug\Entity.dll
+C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\BL\bin\Debug\Entity.pdb
