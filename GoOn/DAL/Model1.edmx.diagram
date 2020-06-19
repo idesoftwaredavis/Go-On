@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b7a85f1cc94f4ebd9844a73f32b32f81" Name="Diagram1">
+        <EntityTypeShape EntityType="GoOnModel.asignatura" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GoOnModel.carga_academica" Width="1.5" PointX="5.25" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GoOnModel.carrera" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GoOnModel.categoria" Width="1.5" PointX="7.5" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GoOnModel.cotidianidad" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GoOnModel.grupos" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="GoOnModel.reportes" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GoOnModel.tipo_usuario" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GoOnModel.Usuario" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <AssociationConnector Association="GoOnModel.FK__asignatur__id_us__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="GoOnModel.FK__categoria__id_ca__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="GoOnModel.FK__Usuario__id_carr__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="GoOnModel.FK__categoria__id_co__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="GoOnModel.FK__cotidiani__id_us__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="GoOnModel.FK__grupos__id_usuar__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="GoOnModel.FK__reportes__id_use__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="GoOnModel.FK__Usuario__id_tipo__3B75D760" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,26 @@
+﻿
+@model List<Entity.EstudianteO>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>Helou</p>
+
+<table class="table table-hover">
+    <tr>
+        <td></td>
+    </tr>
+
+    <tbody>
+        <tr>
+            @foreach(var item in Model)
+            {
+                <td>@item.rut</td>
+                <td>@item.nombres</td>
+            }
+        </tr>
+    </tbody>
+
+</table>

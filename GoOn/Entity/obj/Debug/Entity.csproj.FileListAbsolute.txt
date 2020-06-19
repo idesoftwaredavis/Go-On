@@ -3,3 +3,14 @@ C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\Entit
 C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
 C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\Entity\obj\Debug\Entity.dll
 C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\Entity\obj\Debug\Entity.pdb
+F:\PROGRAMACION\Go-On\GoOn\Entity\bin\Debug\Entity.dll.config
+F:\PROGRAMACION\Go-On\GoOn\Entity\bin\Debug\Entity.dll
+F:\PROGRAMACION\Go-On\GoOn\Entity\bin\Debug\Entity.pdb
+F:\PROGRAMACION\Go-On\GoOn\Entity\bin\Debug\EntityFramework.dll
+F:\PROGRAMACION\Go-On\GoOn\Entity\bin\Debug\EntityFramework.SqlServer.dll
+F:\PROGRAMACION\Go-On\GoOn\Entity\bin\Debug\EntityFramework.xml
+F:\PROGRAMACION\Go-On\GoOn\Entity\bin\Debug\EntityFramework.SqlServer.xml
+F:\PROGRAMACION\Go-On\GoOn\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+F:\PROGRAMACION\Go-On\GoOn\Entity\obj\Debug\Entity.csproj.CopyComplete
+F:\PROGRAMACION\Go-On\GoOn\Entity\obj\Debug\Entity.dll
+F:\PROGRAMACION\Go-On\GoOn\Entity\obj\Debug\Entity.pdb

@@ -4,3 +4,15 @@ C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\DAL\o
 C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\DAL\obj\Debug\DAL.dll
 C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\DAL\obj\Debug\DAL.pdb
+F:\PROGRAMACION\Go-On\GoOn\DAL\bin\Debug\DAL.dll.config
+F:\PROGRAMACION\Go-On\GoOn\DAL\bin\Debug\DAL.dll
+F:\PROGRAMACION\Go-On\GoOn\DAL\bin\Debug\DAL.pdb
+F:\PROGRAMACION\Go-On\GoOn\DAL\bin\Debug\EntityFramework.dll
+F:\PROGRAMACION\Go-On\GoOn\DAL\bin\Debug\EntityFramework.SqlServer.dll
+F:\PROGRAMACION\Go-On\GoOn\DAL\bin\Debug\EntityFramework.xml
+F:\PROGRAMACION\Go-On\GoOn\DAL\bin\Debug\EntityFramework.SqlServer.xml
+F:\PROGRAMACION\Go-On\GoOn\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+F:\PROGRAMACION\Go-On\GoOn\DAL\obj\Debug\DAL.csproj.CopyComplete
+F:\PROGRAMACION\Go-On\GoOn\DAL\obj\Debug\DAL.dll
+F:\PROGRAMACION\Go-On\GoOn\DAL\obj\Debug\DAL.pdb
+F:\PROGRAMACION\Go-On\GoOn\DAL\obj\Debug\DAL.csprojAssemblyReference.cache

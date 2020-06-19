@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
 using BL;
 using Entity;
 namespace GoOn.Controllers
@@ -12,8 +11,12 @@ namespace GoOn.Controllers
     {
         // GET: Estudiante
         public ActionResult Index()
+           
         {
-            return View();
+            // instancio clase Negocio Estudiante 
+            NegocioEstudiante UsuarioBL = new NegocioEstudiante();
+            var listado = UsuarioBL.listadoEstudiantes();
+            return View(listado);
         }
 
         // Agregar Estudiante 
@@ -26,9 +29,10 @@ namespace GoOn.Controllers
         }
 
         [HttpPost]
-        public ActionResult Agregar(EstudianteO objectExample)
+        public ActionResult Agregar(FormCollection form)
         {
             // Llamada al metodo en BL
+           
             return View();
         }
     }

@@ -1,6 +1,0 @@
-C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\proyecto.BL\bin\Debug\proyecto.BL.dll
-C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\proyecto.BL\bin\Debug\proyecto.BL.pdb
-C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\proyecto.BL\obj\Debug\proyecto.BL.csprojAssemblyReference.cache
-C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\proyecto.BL\obj\Debug\proyecto.BL.csproj.CoreCompileInputs.cache
-C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\proyecto.BL\obj\Debug\proyecto.BL.dll
-C:\Users\Davis\Documents\INFORMATICA\Integracion De Plataformas\Go-On\GoOn\proyecto.BL\obj\Debug\proyecto.BL.pdb

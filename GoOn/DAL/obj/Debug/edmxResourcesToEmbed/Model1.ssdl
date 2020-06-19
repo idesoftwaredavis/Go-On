@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GoOnModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="asignatura">
+    <Key>
+      <PropertyRef Name="id_asignatura" />
+    </Key>
+    <Property Name="id_asignatura" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="asignatura" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_usuario" Type="int" />
+  </EntityType>
+  <EntityType Name="carga_academica">
+    <Key>
+      <PropertyRef Name="id_carga_acad" />
+    </Key>
+    <Property Name="id_carga_acad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="carga_acad" Type="varchar" MaxLength="50" />
+    <Property Name="asignatura" Type="varchar" MaxLength="50" />
+    <Property Name="trabajos" Type="varchar" MaxLength="50" />
+    <Property Name="pruebas" Type="varchar" MaxLength="50" />
+    <Property Name="fecha_creacion" Type="datetime" />
+    <Property Name="fecha_entrega" Type="datetime" />
+  </EntityType>
+  <EntityType Name="carrera">
+    <Key>
+      <PropertyRef Name="id_carrera" />
+    </Key>
+    <Property Name="id_carrera" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="carrera" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="categoria">
+    <Key>
+      <PropertyRef Name="id_categoria" />
+    </Key>
+    <Property Name="id_categoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_carga_acad" Type="int" />
+    <Property Name="id_cotidianidad" Type="int" />
+  </EntityType>
+  <EntityType Name="cotidianidad">
+    <Key>
+      <PropertyRef Name="id_cotidianidad" />
+    </Key>
+    <Property Name="id_cotidianidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="decripcion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fecha" Type="date" Nullable="false" />
+    <Property Name="estado" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="id_usuario" Type="int" />
+  </EntityType>
+  <EntityType Name="grupos">
+    <Key>
+      <PropertyRef Name="id_grupo" />
+    </Key>
+    <Property Name="id_grupo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_grupo" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="id_usuario" Type="int" Nullable="false" />
+    <Property Name="administrador" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reportes">
+    <Key>
+      <PropertyRef Name="id_reporte" />
+    </Key>
+    <Property Name="id_reporte" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha" Type="date" Nullable="false" />
+    <Property Name="decripcion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_user" Type="int" />
+  </EntityType>
+  <EntityType Name="tipo_usuario">
+    <Key>
+      <PropertyRef Name="id_tipouser" />
+    </Key>
+    <Property Name="id_tipouser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="rut" />
+    </Key>
+    <Property Name="rut" Type="int" Nullable="false" />
+    <Property Name="dv" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="passwd" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="nombres" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellidos" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="correo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="celular" Type="int" Nullable="false" />
+    <Property Name="fecha_registro" Type="datetime" Nullable="false" />
+    <Property Name="id_carrera" Type="int" />
+    <Property Name="id_tipouser" Type="int" />
+  </EntityType>
+  <Association Name="FK__asignatur__id_us__3E52440B">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="asignatura" Type="Self.asignatura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="rut" />
+      </Principal>
+      <Dependent Role="asignatura">
+        <PropertyRef Name="id_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__categoria__id_ca__45F365D3">
+    <End Role="carga_academica" Type="Self.carga_academica" Multiplicity="0..1" />
+    <End Role="categoria" Type="Self.categoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="carga_academica">
+        <PropertyRef Name="id_carga_acad" />
+      </Principal>
+      <Dependent Role="categoria">
+        <PropertyRef Name="id_carga_acad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__categoria__id_co__46E78A0C">
+    <End Role="cotidianidad" Type="Self.cotidianidad" Multiplicity="0..1" />
+    <End Role="categoria" Type="Self.categoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cotidianidad">
+        <PropertyRef Name="id_cotidianidad" />
+      </Principal>
+      <Dependent Role="categoria">
+        <PropertyRef Name="id_cotidianidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__cotidiani__id_us__412EB0B6">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="cotidianidad" Type="Self.cotidianidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="rut" />
+      </Principal>
+      <Dependent Role="cotidianidad">
+        <PropertyRef Name="id_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__grupos__id_usuar__49C3F6B7">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="grupos" Type="Self.grupos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="rut" />
+      </Principal>
+      <Dependent Role="grupos">
+        <PropertyRef Name="id_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__reportes__id_use__4CA06362">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="reportes" Type="Self.reportes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="rut" />
+      </Principal>
+      <Dependent Role="reportes">
+        <PropertyRef Name="id_user" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__id_carr__3A81B327">
+    <End Role="carrera" Type="Self.carrera" Multiplicity="0..1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="carrera">
+        <PropertyRef Name="id_carrera" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="id_carrera" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__id_tipo__3B75D760">
+    <End Role="tipo_usuario" Type="Self.tipo_usuario" Multiplicity="0..1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipo_usuario">
+        <PropertyRef Name="id_tipouser" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="id_tipouser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="sp_Crear_Usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="rut" Type="int" Mode="In" />
+    <Parameter Name="dv" Type="char" Mode="In" />
+    <Parameter Name="user" Type="varchar" Mode="In" />
+    <Parameter Name="pass" Type="varchar" Mode="In" />
+    <Parameter Name="nombres" Type="varchar" Mode="In" />
+    <Parameter Name="apellido" Type="varchar" Mode="In" />
+    <Parameter Name="correo" Type="varchar" Mode="In" />
+    <Parameter Name="celular" Type="int" Mode="In" />
+    <Parameter Name="fecha" Type="datetime" Mode="In" />
+    <Parameter Name="idCarrera" Type="int" Mode="In" />
+    <Parameter Name="idTipoUser" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="GoOnModelStoreContainer">
+    <EntitySet Name="asignatura" EntityType="Self.asignatura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="carga_academica" EntityType="Self.carga_academica" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="carrera" EntityType="Self.carrera" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="categoria" EntityType="Self.categoria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cotidianidad" EntityType="Self.cotidianidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="grupos" EntityType="Self.grupos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="reportes" EntityType="Self.reportes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tipo_usuario" EntityType="Self.tipo_usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__asignatur__id_us__3E52440B" Association="Self.FK__asignatur__id_us__3E52440B">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="asignatura" EntitySet="asignatura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__categoria__id_ca__45F365D3" Association="Self.FK__categoria__id_ca__45F365D3">
+      <End Role="carga_academica" EntitySet="carga_academica" />
+      <End Role="categoria" EntitySet="categoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK__categoria__id_co__46E78A0C" Association="Self.FK__categoria__id_co__46E78A0C">
+      <End Role="cotidianidad" EntitySet="cotidianidad" />
+      <End Role="categoria" EntitySet="categoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK__cotidiani__id_us__412EB0B6" Association="Self.FK__cotidiani__id_us__412EB0B6">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="cotidianidad" EntitySet="cotidianidad" />
+    </AssociationSet>
+    <AssociationSet Name="FK__grupos__id_usuar__49C3F6B7" Association="Self.FK__grupos__id_usuar__49C3F6B7">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="grupos" EntitySet="grupos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__reportes__id_use__4CA06362" Association="Self.FK__reportes__id_use__4CA06362">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="reportes" EntitySet="reportes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__id_carr__3A81B327" Association="Self.FK__Usuario__id_carr__3A81B327">
+      <End Role="carrera" EntitySet="carrera" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__id_tipo__3B75D760" Association="Self.FK__Usuario__id_tipo__3B75D760">
+      <End Role="tipo_usuario" EntitySet="tipo_usuario" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
