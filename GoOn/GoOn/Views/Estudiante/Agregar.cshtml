@@ -1,7 +1,76 @@
-﻿
+﻿@model List<Entity.EstudianteO>
 @{
     ViewBag.Title = "Agregar";
 }
 
 <h2>Agregar</h2>
 
+<!--Formulario para la creacion del usuario-->
+
+@using (Html.BeginForm("Agregar", "Estudiante", FormMethod.Post))
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+                @Html.LabelFor(m => Model[0].rut)
+                <input type="text" name="rut" />
+            </div>
+
+            <div class="col-md-3">
+                @Html.LabelFor(m => Model[0].dv)
+                <input type="text" name="dv" />
+            </div>
+
+            <div class="col-md-3">
+                @Html.LabelFor(m => Model[0].username)
+                <input type="text" name="username" />
+            </div>
+
+            <div class="col-md-3">
+                @Html.LabelFor(m => Model[0].password)
+                <input type="password" name="password" />
+            </div>
+
+            <div class="col-md-3">
+                @Html.LabelFor(m => Model[0].nombres)
+                <input type="text" name="nombres" />
+            </div>
+
+            <div class="col-md-3">
+                @Html.LabelFor(m => Model[0].apellidos)
+                <input type="text" name="apellidos" />
+            </div>
+
+            <div class="col-md-3">
+                @Html.LabelFor(m => Model[0].correo)
+                <input type="email" name="correo" />
+            </div>
+
+            <div class="col-md-3">
+                @Html.LabelFor(m => Model[0].celular)
+                <input type="number" name="celular" />
+            </div>
+
+            <div class="col-md-3">
+                @Html.LabelFor(m => Model[0].fechaRegistro)
+                <input type="date" name="fecha" />
+            </div>
+
+            <div class="col-md-3">
+                <select id="cars" name="cars">
+                   
+                </select>
+            </div>
+
+
+
+            <input type="submit" value="Registrar Estudiante" />
+        </div>
+
+    </div>
+
+
+
+
+}

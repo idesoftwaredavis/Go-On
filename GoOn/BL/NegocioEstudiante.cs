@@ -58,5 +58,21 @@ namespace BL
             }
             return lista;
         }
+
+        public List<Entity.Carrera> getCarreras()
+        {
+            List<Entity.Carrera> listaCarrera = null;
+
+            using (var bd = new DAL.GoOnEntities())
+            {
+                listaCarrera = (from c in bd.carrera
+                         select new Entity.Carrera
+                         {
+                           idCarrera = c.id_carrera,
+                           carrera = c.carrera1
+                         }).ToList();
+            }
+            return listaCarrera;
+        }
     }
 }

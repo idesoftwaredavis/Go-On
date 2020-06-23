@@ -14,3 +14,15 @@ F:\PROGRAMACION\Go-On\GoOn\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cach
 F:\PROGRAMACION\Go-On\GoOn\Entity\obj\Debug\Entity.csproj.CopyComplete
 F:\PROGRAMACION\Go-On\GoOn\Entity\obj\Debug\Entity.dll
 F:\PROGRAMACION\Go-On\GoOn\Entity\obj\Debug\Entity.pdb
+C:\Users\idedavis\Documents\GIT\Go-On\GoOn\Entity\bin\Debug\Entity.dll.config
+C:\Users\idedavis\Documents\GIT\Go-On\GoOn\Entity\bin\Debug\Entity.dll
+C:\Users\idedavis\Documents\GIT\Go-On\GoOn\Entity\bin\Debug\Entity.pdb
+C:\Users\idedavis\Documents\GIT\Go-On\GoOn\Entity\bin\Debug\EntityFramework.dll
+C:\Users\idedavis\Documents\GIT\Go-On\GoOn\Entity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\idedavis\Documents\GIT\Go-On\GoOn\Entity\bin\Debug\EntityFramework.xml
+C:\Users\idedavis\Documents\GIT\Go-On\GoOn\Entity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\idedavis\Documents\GIT\Go-On\GoOn\Entity\obj\Debug\Entity.csprojAssemblyReference.cache
+C:\Users\idedavis\Documents\GIT\Go-On\GoOn\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+C:\Users\idedavis\Documents\GIT\Go-On\GoOn\Entity\obj\Debug\Entity.csproj.CopyComplete
+C:\Users\idedavis\Documents\GIT\Go-On\GoOn\Entity\obj\Debug\Entity.dll
+C:\Users\idedavis\Documents\GIT\Go-On\GoOn\Entity\obj\Debug\Entity.pdb

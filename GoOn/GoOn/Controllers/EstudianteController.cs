@@ -32,7 +32,24 @@ namespace GoOn.Controllers
         public ActionResult Agregar(FormCollection form)
         {
             // Llamada al metodo en BL
-           
+            
+            var rut = Request.Form["rut"];
+            var dv = Request.Form["dv"];
+            var username = Request.Form["username"];
+            var pass = Request.Form["password"];
+            var nombres = Request.Form["nombres"];
+            var apellidos = Request.Form["apellidos"];
+            var correo = Request.Form["correo"];
+            var celular = Request.Form["celular"];
+            var fecha = Request.Form["fecha"];
+
+            var idCarrera = Request.Form["cars"];
+
+            var carrera = idCarrera;
+            BL.NegocioEstudiante BLEstudiante = new BL.NegocioEstudiante();
+            
+            
+            //BLEstudiante.AgregarUsuarioNeg()
             return View();
         }
     }
