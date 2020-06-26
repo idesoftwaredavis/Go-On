@@ -31,9 +31,12 @@ namespace DAL
         public string apellidos { get; set; }
         public string correo { get; set; }
         public int celular { get; set; }
+        public string foto { get; set; }
         public System.DateTime fecha_registro { get; set; }
         public Nullable<int> id_carrera { get; set; }
         public Nullable<int> id_tipouser { get; set; }
+
+        
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<asignatura> asignatura { get; set; }

@@ -5,15 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 
+
 using DAL; // Uso de using para la capa de acceso a datos.
 namespace BL
 {
-    public class NegocioEstudiante
-    {
-        
-       
+    public class NegocioEstudiante : ListCollection
+    {   
         // Agregar Usuario
-        public bool AgregarUsuarioNeg(int? rut, string dv, string username, string pass, string names, string lastNames, string correo, int celular, DateTime fechaRegistro,
+        public bool AgregarUsuarioNeg(int? rut, string dv, string username, string pass, string names, string lastNames, string correo, string foto, int celular, DateTime fechaRegistro,
                                   int idCarrera, int idTipoUser )
         {
             
@@ -22,7 +21,9 @@ namespace BL
             {
                 using ( var bd = new GoOnEntities())
                 {
-                    bd.sp_Crear_Usuario(rut, dv, username, pass, names, lastNames, correo, celular, fechaRegistro, idCarrera, idTipoUser);
+                    
+                    bd.sp_Crear_Usuario(rut, dv, username, pass, names, lastNames, correo,foto, celular, fechaRegistro, idCarrera, idTipoUser);
+
                     flag = true;
                 }
             }
@@ -34,45 +35,29 @@ namespace BL
             return flag;
         }
 
-        public List<Entity.EstudianteO> listadoEstudiantes()
+        // Íniciar Sesion
+        public bool IniciaSesion(string nombreUsuario, string contraseña)
         {
-            List<Entity.EstudianteO> lista = null;
+            var resultado = false;
+            try
+            {             
+                using (var bd = new DAL.GoOnEntities())
+                {
 
-            using (var bd = new DAL.GoOnEntities())
-            {
-                lista = (from u in bd.Usuario
-                         select new Entity.EstudianteO
-                         {
-                             rut = u.rut,
-                             dv = u.dv,
-                             username = u.username,
-                             password = u.passwd,
-                             nombres = u.nombres,
-                             apellidos = u.apellidos,
-                             correo = u.correo,
-                             celular = u.celular,
-                             fechaRegistro = u.fecha_registro,
-                             idCarrera = u.id_carrera,
-                             idTipoUser = u.id_tipouser
-                         }).ToList();  
+                     
+resultado = bd.Usuario.Any(x => x.username == nombreUsuario && x.passwd == contraseña);
+                }
             }
-            return lista;
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                
+            }
+            return resultado;
         }
 
-        public List<Entity.Carrera> getCarreras()
-        {
-            List<Entity.Carrera> listaCarrera = null;
 
-            using (var bd = new DAL.GoOnEntities())
-            {
-                listaCarrera = (from c in bd.carrera
-                         select new Entity.Carrera
-                         {
-                           idCarrera = c.id_carrera,
-                           carrera = c.carrera1
-                         }).ToList();
-            }
-            return listaCarrera;
-        }
+
+    
     }
 }

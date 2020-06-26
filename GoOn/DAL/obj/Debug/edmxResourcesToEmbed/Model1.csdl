@@ -92,6 +92,7 @@
     <Property Name="apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="celular" Type="Int32" Nullable="false" />
+    <Property Name="foto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="fecha_registro" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="id_carrera" Type="Int32" />
     <Property Name="id_tipouser" Type="Int32" />
@@ -248,6 +249,7 @@
       <Parameter Name="nombres" Mode="In" Type="String" />
       <Parameter Name="apellido" Mode="In" Type="String" />
       <Parameter Name="correo" Mode="In" Type="String" />
+      <Parameter Name="captura" Mode="In" Type="String" />
       <Parameter Name="celular" Mode="In" Type="Int32" />
       <Parameter Name="fecha" Mode="In" Type="DateTime" />
       <Parameter Name="idCarrera" Mode="In" Type="Int32" />

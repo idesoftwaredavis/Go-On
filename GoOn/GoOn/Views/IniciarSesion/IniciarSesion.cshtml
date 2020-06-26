@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "IniciarSesion";
+}
+
+<h2>Bienvenido a Go-On</h2>
+<p> Donde la organizacion, nunca estuvo tan cerca</p>
+
+@using (Html.BeginForm("IniciarSesion","IniciarSesion", FormMethod.Post))
+{
+    <input type="text" placeholder="Username" name="username" />
+    <br />
+    <input type="password" placeholder="Contraseña" name="password"/>
+    <br />
+    
+    <input type="submit" value="Entrar" class="btn btn-primary" name="imagen"/>
+}

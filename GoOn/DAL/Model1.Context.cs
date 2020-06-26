@@ -37,7 +37,7 @@ namespace DAL
         public virtual DbSet<tipo_usuario> tipo_usuario { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
     
-        public virtual int sp_Crear_Usuario(Nullable<int> rut, string dv, string user, string pass, string nombres, string apellido, string correo, Nullable<int> celular, Nullable<System.DateTime> fecha, Nullable<int> idCarrera, Nullable<int> idTipoUser)
+        public virtual int sp_Crear_Usuario(Nullable<int> rut, string dv, string user, string pass, string nombres, string apellido, string correo, string captura, Nullable<int> celular, Nullable<System.DateTime> fecha, Nullable<int> idCarrera, Nullable<int> idTipoUser)
         {
             var rutParameter = rut.HasValue ?
                 new ObjectParameter("rut", rut) :
@@ -67,6 +67,10 @@ namespace DAL
                 new ObjectParameter("correo", correo) :
                 new ObjectParameter("correo", typeof(string));
     
+            var capturaParameter = captura != null ?
+                new ObjectParameter("captura", captura) :
+                new ObjectParameter("captura", typeof(string));
+    
             var celularParameter = celular.HasValue ?
                 new ObjectParameter("celular", celular) :
                 new ObjectParameter("celular", typeof(int));
@@ -83,7 +87,7 @@ namespace DAL
                 new ObjectParameter("idTipoUser", idTipoUser) :
                 new ObjectParameter("idTipoUser", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_Crear_Usuario", rutParameter, dvParameter, userParameter, passParameter, nombresParameter, apellidoParameter, correoParameter, celularParameter, fechaParameter, idCarreraParameter, idTipoUserParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_Crear_Usuario", rutParameter, dvParameter, userParameter, passParameter, nombresParameter, apellidoParameter, correoParameter, capturaParameter, celularParameter, fechaParameter, idCarreraParameter, idTipoUserParameter);
         }
     }
 }

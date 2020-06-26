@@ -1,76 +1,93 @@
-﻿@model List<Entity.EstudianteO>
+﻿@model GoOn.Models.Usuario
 @{
     ViewBag.Title = "Agregar";
 }
 
-<h2>Agregar</h2>
+<h2>Test Estudiante</h2>
 
 <!--Formulario para la creacion del usuario-->
+@if (ViewBag.mensaje != null)
+{
+    var contenido = ViewBag.mensaje;
+    if (contenido.Contains("exitosamente") == true)
+    {
+        <div class="alert alert-success">@ViewBag.mensaje</div>
+    }
+    else
+    {
+        <div class="alert alert-danger">@ViewBag.mensaje</div>
+    }
 
-@using (Html.BeginForm("Agregar", "Estudiante", FormMethod.Post))
+}
+
+@using (Html.BeginForm("Agregar", "Estudiante", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div>
 
-                @Html.LabelFor(m => Model[0].rut)
-                <input type="text" name="rut" />
+                <label for="rut">Nombre Rut :</label>
+                <input type="text" name="rut" id="rut" />
+
+                <label for="dv">DV :</label>
+                <input type="text" name="dv" id="dv" />
             </div>
 
-            <div class="col-md-3">
-                @Html.LabelFor(m => Model[0].dv)
-                <input type="text" name="dv" />
+            <div>
+                <label for="username">Username :</label>
+                <input type="text" name="username" id="username" />
             </div>
 
-            <div class="col-md-3">
-                @Html.LabelFor(m => Model[0].username)
-                <input type="text" name="username" />
+            <div>
+                <label for="password">Password :</label>
+                <input type="password" name="password" id="password" />
             </div>
 
-            <div class="col-md-3">
-                @Html.LabelFor(m => Model[0].password)
-                <input type="password" name="password" />
+            <div>
+                <label for="nombres">Nombres :</label>
+                <input type="text" name="nombres" id="nombres" />
             </div>
 
-            <div class="col-md-3">
-                @Html.LabelFor(m => Model[0].nombres)
-                <input type="text" name="nombres" />
+            <div>
+                <label for="apellidos">Apellidos :</label>
+                <input type="text" name="apellidos" id="apellidos" />
             </div>
 
-            <div class="col-md-3">
-                @Html.LabelFor(m => Model[0].apellidos)
-                <input type="text" name="apellidos" />
+            <div>
+                <label for="email">Email :</label>
+                <input type="email" name="correo" id="email" />
             </div>
 
-            <div class="col-md-3">
-                @Html.LabelFor(m => Model[0].correo)
-                <input type="email" name="correo" />
+            <div>
+                <label for="celular">Celular :</label>
+                <input type="number" name="celular" id="celular" />
             </div>
 
-            <div class="col-md-3">
-                @Html.LabelFor(m => Model[0].celular)
-                <input type="number" name="celular" />
+            <div>
+                <label for="fecha">Fecha Nacimiento :</label>
+                <input type="date" name="fecha" id="fecha" />
             </div>
 
-            <div class="col-md-3">
-                @Html.LabelFor(m => Model[0].fechaRegistro)
-                <input type="date" name="fecha" />
-            </div>
+            <select name="idCarrera">
+                
+                    <option value="1">Ingenieria informatica</option>
+                    <option value="2">Gastronomia</option>
+                    <option value="3">Ingenieria Conectividad y Redes</option>
+                    <option value="4">Turismo y Hoteleria</option>
+                    <option value="5">Administracion de Empresa</option>
 
-            <div class="col-md-3">
-                <select id="cars" name="cars">
-                   
-                </select>
-            </div>
+            </select>
 
+            <div>
+                <input type="file" name="imageFile"  />
+            </div>
 
 
             <input type="submit" value="Registrar Estudiante" />
         </div>
 
     </div>
-
-
-
 
 }

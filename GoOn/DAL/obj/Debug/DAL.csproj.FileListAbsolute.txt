@@ -23,8 +23,8 @@ C:\Users\idedavis\Documents\GIT\Go-On\GoOn\DAL\bin\Debug\EntityFramework.dll
 C:\Users\idedavis\Documents\GIT\Go-On\GoOn\DAL\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\idedavis\Documents\GIT\Go-On\GoOn\DAL\bin\Debug\EntityFramework.xml
 C:\Users\idedavis\Documents\GIT\Go-On\GoOn\DAL\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\idedavis\Documents\GIT\Go-On\GoOn\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
 C:\Users\idedavis\Documents\GIT\Go-On\GoOn\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\idedavis\Documents\GIT\Go-On\GoOn\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\idedavis\Documents\GIT\Go-On\GoOn\DAL\obj\Debug\DAL.dll
 C:\Users\idedavis\Documents\GIT\Go-On\GoOn\DAL\obj\Debug\DAL.pdb
+C:\Users\idedavis\Documents\GIT\Go-On\GoOn\DAL\obj\Debug\DAL.csprojAssemblyReference.cache

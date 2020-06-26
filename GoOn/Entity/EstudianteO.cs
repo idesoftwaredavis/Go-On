@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+
+using System.Web;
 namespace Entity
 {
-    public class EstudianteO
+    public class EstudianteO 
     {
         [Required]
         [Display (Name ="Rut Usuario")]
@@ -38,5 +40,9 @@ namespace Entity
         public int? idCarrera { get; set; }
         [Required]
         public int? idTipoUser { get; set; }
+
+        public string foto { get; set; }
+        public string nombrecarrera { get; set; }
+        
     }
 }

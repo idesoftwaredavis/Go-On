@@ -1,7 +1,8 @@
 ﻿
-@model List<Entity.EstudianteO>
+@model GoOn.Services.BL.ListCollection
 @{
     ViewBag.Title = "Index";
+
 }
 
 <h2>Index</h2>
@@ -9,18 +10,74 @@
 <p>Helou</p>
 
 <table class="table table-hover">
-    <tr>
-        <td></td>
-    </tr>
+    <thead>
+        <tr>
+
+            <td>Rut</td>
+            <td>Dv</td>
+            <td>Username</td>
+            <td>Password</td>
+            <td>Nombres</td>
+            <td>Apellidos</td>
+            <td>Correo</td>
+            <td>Celular</td>
+            <td>Fecha Registro </td>
+            <td>Nombre de Carrera </td>
+
+
+
+        </tr>
+    </thead>
+
 
     <tbody>
-        <tr>
-            @foreach(var item in Model)
-            {
+
+        @foreach (var item in Model.listadoEstudiantes)
+        {
+            <tr>
+
                 <td>@item.rut</td>
+                <td>@item.dv</td>
+                <td>@item.username</td>
+                <td>@item.password</td>
                 <td>@item.nombres</td>
-            }
-        </tr>
+                <td>@item.apellidos</td>
+                <td>@item.correo</td>
+                <td>@item.celular</td>
+                <td>@item.fechaRegistro</td>
+                <td>@item.nombrecarrera</td>
+                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Actualizar</button> </td>
+
+            </tr>
+
+        }
+
     </tbody>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </table>

@@ -1,0 +1,25 @@
+﻿
+@model  IEnumerable<GoOn.Models.Usuario>
+@{
+    ViewBag.Title = "Perfil";
+}
+
+
+<h2 class="text-center text-info">Perfil</h2>
+@foreach (var items in Model)
+{
+    <img src="@Url.Content(items.foto)" alt="Alternate Text" width="400" height="300" class="center" />
+
+    <p class="text-center text-muted">¿Listo para organizarte,<strong> <i> @items.username </i> </strong>  ?</p>
+
+    <p class="text-center text-muted">Contacto : <strong> @items.celular </strong> </p>
+
+
+}
+
+@Html.ActionLink("Ver Mas", "VerMasPerfil", "Estudiante", null, new { @class = "btn btn-danger text-center btn-block" })
+
+
+
+
+

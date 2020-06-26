@@ -87,6 +87,7 @@
           <Property Name="apellidos" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="correo" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="celular" Type="int" Nullable="false" />
+          <Property Name="foto" Type="varchar" MaxLength="50" />
           <Property Name="fecha_registro" Type="datetime" Nullable="false" />
           <Property Name="id_carrera" Type="int" />
           <Property Name="id_tipouser" Type="int" />
@@ -187,6 +188,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="fn_iniciar_sesion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="contra" Type="varchar" Mode="In" />
+          <Parameter Name="rut" Type="int" Mode="In" />
+        </Function>
         <Function Name="sp_Crear_Usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="rut" Type="int" Mode="In" />
           <Parameter Name="dv" Type="char" Mode="In" />
@@ -195,6 +201,7 @@
           <Parameter Name="nombres" Type="varchar" Mode="In" />
           <Parameter Name="apellido" Type="varchar" Mode="In" />
           <Parameter Name="correo" Type="varchar" Mode="In" />
+          <Parameter Name="captura" Type="varchar" Mode="In" />
           <Parameter Name="celular" Type="int" Mode="In" />
           <Parameter Name="fecha" Type="datetime" Mode="In" />
           <Parameter Name="idCarrera" Type="int" Mode="In" />
@@ -340,6 +347,7 @@
           <Property Name="apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="celular" Type="Int32" Nullable="false" />
+          <Property Name="foto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="fecha_registro" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="id_carrera" Type="Int32" />
           <Property Name="id_tipouser" Type="Int32" />
@@ -496,6 +504,7 @@
             <Parameter Name="nombres" Mode="In" Type="String" />
             <Parameter Name="apellido" Mode="In" Type="String" />
             <Parameter Name="correo" Mode="In" Type="String" />
+            <Parameter Name="captura" Mode="In" Type="String" />
             <Parameter Name="celular" Mode="In" Type="Int32" />
             <Parameter Name="fecha" Mode="In" Type="DateTime" />
             <Parameter Name="idCarrera" Mode="In" Type="Int32" />
@@ -597,6 +606,7 @@
                 <ScalarProperty Name="apellidos" ColumnName="apellidos" />
                 <ScalarProperty Name="correo" ColumnName="correo" />
                 <ScalarProperty Name="celular" ColumnName="celular" />
+                <ScalarProperty Name="foto" ColumnName="foto" />
                 <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
                 <ScalarProperty Name="id_carrera" ColumnName="id_carrera" />
                 <ScalarProperty Name="id_tipouser" ColumnName="id_tipouser" />
