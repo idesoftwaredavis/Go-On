@@ -1,0 +1,15 @@
+Añadir: glyphicon-plus
+Eliminar: glyphicon-trash
+Editar: glyphicon-pencil
+Filtro: glyphicon-search
+Guardar: glyphicon-floppy-disk
+Ver: glyphicon-eye-open
+Volver: glyphicon-arrow-left
+Agregar otro usuario al grupo: glyphicon-plus-sign
+Editar grupo: glyphicon-wrench
+Usuario: glyphicon-user
+Dudas sobre el sistema: glyphicon-question-sign
+Checklist: glyphicon glyphicon-check
+Tareas: glyphicon glyphicon-book
+Grupos: glyphicon glyphicon-comment
+Generar reportes: glyphicon glyphicon-save-file
