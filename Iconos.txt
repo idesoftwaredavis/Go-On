@@ -13,3 +13,7 @@ Checklist: glyphicon glyphicon-check
 Tareas: glyphicon glyphicon-book
 Grupos: glyphicon glyphicon-comment
 Generar reportes: glyphicon glyphicon-save-file
+Informacion: glyphicon glyphicon-info-sign
+Lectura informativa: glyphicon glyphicon-blackboard
+Recordatorio: glyphicon glyphicon-asterisk
+Priorizar: glyphicon glyphicon-edit
